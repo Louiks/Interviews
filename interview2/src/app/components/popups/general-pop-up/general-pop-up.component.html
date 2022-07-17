@@ -1,0 +1,58 @@
+<div class="dialog">
+  <div class="dialog__header">
+    <div class="dialog__column">
+      <div mat-dialog-title class="dialog__main-header">
+        {{ data.mainHeader }}
+      </div>
+      <div class="dialog__sub-header">
+        {{ data.dateTimeHeader | date: "dd/MM/yy" }}-{{
+          data.dateTimeHeader | date: "hh:mm"
+        }}
+      </div>
+    </div>
+    <a (click)="onNoClick()" class="dialog__icon dialog__column"></a>
+  </div>
+  <div mat-dialog-content class="dialog__content">
+    <div class="dialog__control-label">
+      {{ data.controlLabel }}
+    </div>
+    <form class="dialog__dropdown" [formGroup]="mainForm">
+      <mat-form-field class="dialog__dropdown-select">
+        <mat-select [formControl]="optionsCtrl" #singleSelect>
+          <mat-option>
+            <ngx-mat-select-search
+              [formControl]="optionFilterCtrl"
+              placeholderLabel="Find registration..."
+              noEntriesFoundLabel="No registration found..."
+              closeIcon="X"
+            ></ngx-mat-select-search>
+          </mat-option>
+          <mat-option
+            *ngFor="let option of filteredOptions | async"
+            [value]="option"
+          >
+            {{ option }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+  </div>
+  <div mat-dialog-actions class="dialog__footer">
+    <button
+      mat-button
+      (click)="onNoClick()"
+      class="dialog__button dialog__left-button"
+    >
+      {{ data.rejectButtonText | uppercase }}
+    </button>
+    <button
+      mat-button
+      (click)="onOkClick()"
+      [disabled]="currentValue === previousValue"
+      cdkFocusInitial
+      class="dialog__button dialog__right-button"
+    >
+      {{ data.acceptButtonText | uppercase }}
+    </button>
+  </div>
+</div>

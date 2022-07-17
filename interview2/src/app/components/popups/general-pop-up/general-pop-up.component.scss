@@ -1,0 +1,90 @@
+.dialog {
+  background-color: #f0f0f0;
+  width: 359px;
+  height: 230px;
+  overflow: hidden;
+}
+.dialog__header {
+  height: 61px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dialog__main-header {
+  font-family: sspro;
+  font-weight: bold;
+  font-size: 21px;
+  color: #000000;
+  padding-left: 75px;
+  padding-top: 14px;
+  margin: 0;
+  height: fit-content;
+  line-height: 14px;
+}
+.dialog__sub-header {
+  font-family: sspro;
+  font-weight: bold;
+  font-size: 12px;
+  color: #000000;
+  padding-left: 75px;
+  padding-top: 5px;
+}
+.dialog__icon {
+  background: url("../../../../assets/icons/icon_close.png") no-repeat left
+    center;
+  padding-right: 27px;
+  height: 40px;
+  width: 40px;
+  transform: scale(0.5);
+}
+.dialog__content {
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0px 0px 0px 4px;
+  width: 351px;
+  height: 108px;
+}
+.dialog__control-label {
+  font-family: sspro;
+  font-size: 12px;
+  padding-left: 25px;
+  padding-top: 23px;
+  padding-bottom: 5px;
+}
+.dialog__dropdown {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.dialog__dropdown-select {
+  width: 100%;
+  padding: 0;
+  border: 0;
+}
+.dialog__button {
+  padding-top: 11px;
+  border: solid;
+  border-color: #18abf4;
+  width: 122px;
+  height: 40px;
+  font-family: sspro;
+  font-size: 14px;
+  font-weight: bold;
+}
+.dialog__left-button {
+  margin-left: 49px;
+  padding: 0;
+  background-color: #ffffff;
+  text-align: center;
+  vertical-align: baseline;
+  color: #18abf4;
+}
+.dialog__right-button {
+  padding: 0;
+  margin-left: 2px;
+  background-color: #52c0f7;
+  color: #ffffff;
+}
+.dialog__footer {
+  min-height: 61px;
+  padding: 0;
+}

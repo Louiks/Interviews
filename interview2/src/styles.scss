@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/css/fonts.scss";
+@import "./assets/css/reset.scss";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@font-face {
+    font-family: sspro;
+    src: url('../src/assets/fonts/Source-Sans-Pro-regular.woff') format("opentype");
+}
+@font-face {
+    font-family: sspro-bold;
+    src: url('../src/assets/fonts/SourceSansPro-Bold.ttf.woff') format("opentype");
+}
+.custom-dialog-container .mat-dialog-container {
+    padding: 0;
+}
+

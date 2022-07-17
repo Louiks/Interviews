@@ -1,0 +1,17 @@
+<div class="row-container">
+  <div class="row-cell">
+    <p>{{ row.flightNumber }}</p>
+  </div>
+  <div class="row-cell">
+    <p>{{ row.scheduledDate | date: "dd/MM/yy" }}</p>
+  </div>
+  <div class="row-cell">
+    <p>{{ row.scheduledDate | date: "hh:mm" }}</p>
+  </div>
+  <div class="row-cell">
+    <p>{{ row.originDestination }}</p>
+  </div>
+  <div class="row-cell" (click)="openModal()">
+    <p>{{ currentRegistration ? currentRegistration : ".........." }}</p>
+  </div>
+</div>
